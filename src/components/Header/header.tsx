@@ -126,7 +126,7 @@
 
 
 'use client';
-import { RiHome2Line } from "react-icons/ri";
+import { IoHome } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -134,17 +134,23 @@ const Header = () => {
     return (
         <header className="flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-5 bg-green-700 shadow-md">
             <div className="flex  items-center">
-                <Image className="bg-white" src={"/asset/msab_logo_b.png"} width={75} height={75} alt={"msab logo"} />
+                <Image className="bg-white" 
+                src={"/asset/msab_logo_b.png"} 
+                width={75} 
+                height={75} 
+                alt={"msab logo"} />
             </div>
             <nav className="flex gap-6">
                 <Link href="#" className="relative text-lg text-white pb-1 flex items-center gap-2 group">
-                    <RiHome2Line className="text-red-700 transition-colors duration-300" />
+                    <IoHome  className="text-red-700 transition-colors duration-300" />
                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
-                <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
+                <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group"
+                >
                 সেবাসমূহ
                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
+                
                 <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
                 ব্লগ
                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
