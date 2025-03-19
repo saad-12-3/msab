@@ -1,6 +1,5 @@
 
 "use client";
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import React from "react";
