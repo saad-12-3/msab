@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Tiro_Bangla } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/header";
 
+// bangla font setting
+const tiroBangla = Tiro_Bangla({
+  subsets: ["bengali"],
+  weight: ["400"], 
+  style: ["normal", "italic"],
+});
 
 
-
-const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "msab||#MHS",
   description: "#MHS",
@@ -20,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className}`}>
+        className={`${tiroBangla.className}`}>
          <Header />
         {children}
       </body>

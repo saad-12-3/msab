@@ -142,7 +142,7 @@ const Header = () => {
       </div>
       <nav className="flex gap-6">
         <Link
-          href="#"
+          href="/"
           className="relative text-lg text-white pb-1 flex items-center gap-2 group"
         >
           <IoHome className="text-red-700 transition-colors duration-300" />
