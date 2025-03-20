@@ -1,184 +1,77 @@
-// 'use client';
-// import { RiHome2Line } from "react-icons/ri";
-// import Image from "next/image";
-// import Link from "next/link";
-
-// const Header = () => {
-//     return (
-//         <header className="flex justify-between items-center p-5 bg-green-700 shadow-md">
-//             <div className="flex items-center">
-//                 <Image className="bg-white" src={"/asset/msab_logo_b.png"} width={85} height={85} alt={"msab logo"} />
-//             </div>
-//             <nav className="flex gap-6">
-//                 <Link href="#" className="relative text-lg text-white pb-1 flex items-center gap-2 group">
-//                     <RiHome2Line className="text-red-700 group-hover:text-green-700 transition-colors duration-300" />
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-//                 </Link>
-//                 <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700">
-//                     সেবাসমূহ
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 hover:w-full"></span>
-//                 </Link>
-//                 <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700">
-//                     ব্লগ
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 hover:w-full"></span>
-//                 </Link>
-//                 <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700">
-//                     যোগাযোগ
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 hover:w-full"></span>
-//                 </Link>
-//             </nav>
-//             <button className="px-4 py-2.5 rounded-md text-white text-base bg-red-700 transition-colors duration-300 hover:bg-green-700">
-//                 Login
-//             </button>
-//         </header>
-//     );
-// };
-
-// export default Header;
-
-//
-
-//
-
-// 'use client';
-// import { RiHome2Line } from "react-icons/ri";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { useState } from "react";
-
-// const Header = () => {
-//     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-//     const toggleMobileMenu = () => {
-//         setIsMobileMenuOpen(!isMobileMenuOpen);
-//     };
-
-//     return (
-//         <header className="flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-5 bg-green-700 shadow-md">
-//             {/* Logo */}
-//             <div className="flex items-center">
-//                 <Image className="bg-white" src={"/asset/msab_logo_b.png"} width={75} height={75} alt={"msab logo"} />
-//             </div>
-
-//             {/* Mobile Menu Toggle */}
-//             <button
-//                 className="lg:hidden text-white text-2xl"
-//                 onClick={toggleMobileMenu}
-//             >
-//                 {isMobileMenuOpen ? '✖' : '☰'}
-//             </button>
-
-//             {/* Sidebar Navigation for Mobile */}
-//             <div
-//                 className={`lg:hidden fixed top-0 left-0 h-full bg-green-700 transition-transform duration-300 ${isMobileMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
-//             >
-//                 <nav className="flex flex-col items-start gap-6 p-6">
-//                     <Link href="#" className="relative text-lg text-white pb-1 flex items-center gap-2 group">
-//                         <RiHome2Line className="text-red-700 transition-colors duration-300" />
-//                         <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                     </Link>
-//                     <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
-//                         সেবাসমূহ
-//                         <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                     </Link>
-//                     <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
-//                         ব্লগ
-//                         <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                     </Link>
-//                     <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
-//                         যোগাযোগ
-//                         <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                     </Link>
-//                 </nav>
-//             </div>
-
-//             {/* Regular Navigation for Desktop */}
-//             <nav className="hidden lg:flex gap-6">
-//                 <Link href="#" className="relative text-lg text-white pb-1 flex items-center gap-2 group">
-//                     <RiHome2Line className="text-red-700 transition-colors duration-300" />
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                 </Link>
-//                 <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
-//                     সেবাসমূহ
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                 </Link>
-//                 <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
-//                     ব্লগ
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                 </Link>
-//                 <Link href="#" className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group">
-//                     যোগাযোগ
-//                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//                 </Link>
-//             </nav>
-
-//             {/* Login Button */}
-//             <button className="relative px-4 py-2 rounded-md text-white text-base bg-red-700 transition-colors duration-300 hover:bg-green-700 group">
-//                 Login
-//                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-//             </button>
-//         </header>
-//     );
-// };
-
-// export default Header;
-
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { IoHome } from "react-icons/io5";
+import { IoHome, IoSearch } from "react-icons/io5";
+import { Input } from "../ui/input";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <header className="flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-5 bg-green-700 shadow-md">
-      <div className="flex  items-center">
-        <Image
-          className="bg-white"
-          src={"/asset/msab_logo_b.png"}
-          width={75}
-          height={75}
-          alt={"msab logo"}
-        />
-      </div>
-      <nav className="flex gap-6">
-        <Link
-          href="/"
-          className="relative text-lg text-white pb-1 flex items-center gap-2 group"
-        >
-          <IoHome className="text-red-700 transition-colors duration-300" />
-          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-        <Link
-          href="#"
-          className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group"
-        >
-          সেবাসমূহ
-          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-        </Link>
+    <div className="bg-green-700">
+      <header className="w-11/12 mx-auto md:w-10/12 py-4 ">
+      <div className="flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center">
+          <Image
+            className="bg-white rounded-md"
+            src={"/asset/msab_logo_b.png"}
+            width={75}
+            height={75}
+            alt="MSAB Logo"
+          />
+        </div>
 
-        <Link
-          href="#"
-          className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group"
-        >
-          ব্লগ
-          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
+        {/* Navigation */}
+        <nav className="hidden md:flex gap-6">
+          <NavItem href="/" icon={<IoHome className="text-red-700" />} text="হোম" />
+          <NavItem href="#" text="সেবাসমূহ" />
+          <NavItem href="#" text="ব্লগ" />
+          <NavItem href="#" text="যোগাযোগ" />
+        </nav>
+
+        {/* Login Button */}
+        <Link href="/auth/login">
+          <button className="px-4 py-2 rounded-md text-white bg-red-700 hover:bg-green-700 transition-all">
+            Login
+          </button>
         </Link>
-        <Link
-          href="#"
-          className="relative text-lg text-white pb-1 hover:text-red-700 focus:text-red-700 group"
-        >
-          যোগাযোগ
-          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      </nav>
-      <Link href={"/auth/login"}>
-        <button className="relative px-4 py-2 rounded-md text-white text-base bg-red-700 transition-colors duration-300 hover:bg-green-700 group">
-          Login
-          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
-        </button>
-      </Link>
+      </div>
+
+      {/* Search Bar */}
+      <div className="py-10 flex justify-center">
+        <div className="relative w-full max-w-lg">
+          <Input
+            type="text"
+            className="w-full py-6 pl-5 pr-16 rounded-full bg-white/70 shadow-lg backdrop-blur-md focus:ring-2 focus:ring-green-500 outline-none transition-all"
+            placeholder="আপনি কি খুঁজছেন?"
+          />
+          <button
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-2 rounded-full hover:bg-red-700 transition-all"
+            aria-label="Search"
+          >
+            <IoSearch className="text-xl" />
+          </button>
+        </div>
+      </div>
     </header>
+    </div>
   );
 };
+
+// Navigation Link Component
+interface NavItemProps {
+  href: string;
+  text: string;
+  icon?: React.ReactNode;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ href, icon, text }) => (
+  <Link
+    href={href}
+    className="relative text-lg text-white pb-1 flex items-center gap-2 group hover:text-red-700"
+  >
+    {icon}
+    {text}
+    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-transparent group-hover:bg-red-700 transition-all duration-300 group-hover:w-full"></span>
+  </Link>
+);
 
 export default Header;
