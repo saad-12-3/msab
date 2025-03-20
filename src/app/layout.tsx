@@ -1,15 +1,15 @@
+import Header from "@/components/Header/header";
+import Footer from "@/pages/home/footer";
 import type { Metadata } from "next";
 import { Tiro_Bangla } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header/header";
 
 // bangla font setting
 const tiroBangla = Tiro_Bangla({
   subsets: ["bengali"],
-  weight: ["400"], 
+  weight: ["400"],
   style: ["normal", "italic"],
 });
-
 
 export const metadata: Metadata = {
   title: "msab||#MHS",
@@ -23,10 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${tiroBangla.className}`}>
-         <Header />
-        {children}
+      <body className={`${tiroBangla.className}`}>
+        <header>
+          <Header />
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
