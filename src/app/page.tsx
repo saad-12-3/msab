@@ -9,13 +9,12 @@ import Services from "@/pages/home/services";
 export default function Home() {
   return (
     <div >
-      <Hero></Hero>
-      <Services></Services>
-      <Footer></Footer>
       <Hero/>
+      <Services/>
       <Services/>
       <FaqSection/>
       <LatestBlog/>
+      <Footer/>
     </div>
   );
 }
