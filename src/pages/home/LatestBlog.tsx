@@ -1,5 +1,12 @@
+"use client";
 import LatestBlogCard from "@/components/allCard/LatestBlogCard";
 import blogData from "@/utils/blogData";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const LatestBlog = () => {
   return (
@@ -8,10 +15,24 @@ const LatestBlog = () => {
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
           সর্বশেষ ব্লগ পোস্ট
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xxl:grid-cols-4 gap-6 place-content-center">
-          {blogData?.map((item) => (
-            <LatestBlogCard key={item?.id} data={item} />
-          ))}
+        <div>
+          <Swiper
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            modules={[Pagination]}
+            breakpoints={{
+              320: { slidesPerView: 1.2 },
+              1024: { slidesPerView: 3 },
+              1480: { slidesPerView: 4 },
+            }}
+            className="mySwiper"
+          >
+            {blogData?.map((item) => (
+              <SwiperSlide key={item?.id}>
+                <LatestBlogCard data={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
