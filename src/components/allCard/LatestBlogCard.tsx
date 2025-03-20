@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { Button } from "../ui/button";
 
 interface LatestBlogCardProps {
   data: {
@@ -19,25 +20,37 @@ interface LatestBlogCardProps {
 }
 
 const LatestBlogCard: React.FC<LatestBlogCardProps> = ({ data }) => {
-  const { subTitle, category, description, image } = data || {};
+  const { subTitle, description, image } = data || {};
 
   return (
-    <Card className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 pt-0">
-      <div className="relative w-full h-56">
+    <Card className="rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-white border border-gray-200 flex flex-col h-[380px] pt-0">
+      <div className="relative w-full h-48">
         <Image 
           src={image.replace(".com.com", ".com")} // Fix invalid hostname issue
           alt="blog image"
           layout="fill"
           objectFit="cover"
-          className="rounded-t-lg"
+          className="rounded-t-2xl"
         />
       </div>
-      <CardHeader>
-        <CardTitle className="text-lg font-semibold text-gray-900">{subTitle}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <CardDescription className="text-sm text-gray-700">{description}</CardDescription>
-      </CardContent>
+
+      <div className="flex flex-col flex-grow px-4 pb-3">
+        <CardHeader className="p-0">
+          <CardTitle className="text-lg font-bold text-gray-900">{subTitle}</CardTitle>
+        </CardHeader>
+
+        <CardContent className="flex-grow p-0 mt-2">
+          <CardDescription className="text-sm text-gray-600 line-clamp-3">
+            {description}
+          </CardDescription>
+        </CardContent>
+      </div>
+
+      <CardFooter className="p-4">
+        <Button className="w-full bg-blue-600 text-white hover:bg-blue-700 transition-all">
+          বিস্তারিত দেখুন
+        </Button>
+      </CardFooter>
     </Card>
   );
 };
