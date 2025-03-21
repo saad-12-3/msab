@@ -1,7 +1,11 @@
 // import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+<<<<<<< HEAD:src/components/footer/footer.tsx
 import { FaFacebook,  FaYoutube } from "react-icons/fa";
+=======
+import { FaFacebook, FaYoutube } from "react-icons/fa";
+>>>>>>> main:src/pages/home/footer.tsx
 
 const Footer = () => {
     return (
