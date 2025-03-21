@@ -1,5 +1,6 @@
 import Header from "@/components/Header/header";
-import Footer from "@/pages/home/footer";
+import Footer from "@/components/footer/footer";
+import ClientWrapper from "@/components/share/ClientWrapper";
 import type { Metadata } from "next";
 import { Tiro_Bangla } from "next/font/google";
 import "./globals.css";
@@ -30,6 +31,7 @@ export default function RootLayout({
         <main>{children}</main>
         <footer>
           <Footer />
+          <ClientWrapper />
         </footer>
       </body>
     </html>

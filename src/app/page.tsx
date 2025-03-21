@@ -11,7 +11,7 @@ export default function Home() {
       <Services />
       <FaqSection />
       <LatestBlog />
-      <AboutSection></AboutSection>
+      <AboutSection />
     </div>
   );
 }

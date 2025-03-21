@@ -7,16 +7,16 @@ import { IoHome, IoSearch } from "react-icons/io5";
 import { Input } from "../ui/input";
 
 const Header: React.FC = () => {
+  
   const path = usePathname();
-  const [action, setActive] = useState(true);
+  const [action, setActive] = useState(false);
 
-  console.log(path , action);
 
   useEffect(() => {
-    if (path === "/auth/login" || path === "/auth/register") {
-      setActive(false);
+    if (path === "/") {
+      setActive(true);
     }else{
-      setActive(true)
+      setActive(false)
     }
   }, [path]);
 
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
               text="হোম"
             />
             <NavItem href="#" text="সেবাসমূহ" />
-            <NavItem href="#" text="ব্লগ" />
+            <NavItem href="/blog" text="ব্লগ" />
             <NavItem href="#" text="যোগাযোগ" />
           </nav>
 
@@ -68,8 +68,7 @@ const Header: React.FC = () => {
             />
             <button
               className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-2 rounded-full hover:bg-red-700 transition-all"
-              aria-label="Search"
-            >
+              aria-label="Search">
               <IoSearch className="text-xl" />
             </button>
           </div>
